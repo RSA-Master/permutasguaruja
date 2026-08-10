@@ -1,13 +1,13 @@
 /* Editorial Atlântico: corporate editorial rhythm, navy contrast, gold action signals, generous whitespace. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 :root { --navy:#071A33; --navy-2:#0B2749; --ink:#10233B; --blue:#AFC9DC; --mist:#F1F5F7; --gold:#D6A84F; --gold-soft:#F3E5C3; --white:#fff; --line:#DCE5EA; --muted:#617184; --radius:0.5rem; --background:#fff; --foreground:var(--ink); --primary:var(--navy); --primary-foreground:#fff; --border:var(--line); --ring:var(--gold); }
-@theme inline { --font-sans:'Manrope',sans-serif; --font-display:'DM Serif Display',serif; --color-background:var(--background); --color-foreground:var(--foreground); --color-border:var(--border); --color-ring:var(--ring); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --radius-sm:calc(var(--radius) - 3px); --radius-md:calc(var(--radius) - 1px); --radius-lg:var(--radius); }
+@theme inline { --font-sans:'IBM Plex Sans',sans-serif; --font-display:'DM Serif Display',serif; --color-background:var(--background); --color-foreground:var(--foreground); --color-border:var(--border); --color-ring:var(--ring); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --radius-sm:calc(var(--radius) - 3px); --radius-md:calc(var(--radius) - 1px); --radius-lg:var(--radius); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; background:#fff; color:var(--ink); font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; }
+body { margin:0; background:#fff; color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; }
 a { color:inherit; text-decoration:none; }
 button { font:inherit; }
 .container { width:100%; max-width:1240px; margin:0 auto; padding:0 28px; }
@@ -252,9 +252,27 @@ button { font:inherit; }
 }
 
 /* Typography refinement: professional, upright display hierarchy. */
-.hero h1, .section-heading h2, .capacity-copy h2, .final-cta h2, .trade-card h3 { font-family: 'Manrope', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.045em; }
-.hero h1 em, .section-heading h2 em, .capacity-copy h2 em, .final-cta h2 em { font-family: 'Manrope', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.05em; }
+.hero h1, .section-heading h2, .capacity-copy h2, .final-cta h2, .trade-card h3 { font-family: 'IBM Plex Sans', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.045em; }
+.hero h1 em, .section-heading h2 em, .capacity-copy h2 em, .final-cta h2 em { font-family: 'IBM Plex Sans', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.05em; }
 
 /* Final type lock: keep all display copy upright and professional. */
-h1, h2, h3, h4, h5, h6, h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-family: 'Manrope', sans-serif; font-style: normal; }
+h1, h2, h3, h4, h5, h6, h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-family: 'IBM Plex Sans', sans-serif; font-style: normal; }
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-weight: 800; }
+
+/* Focused visual correction: calmer hero and deterministic six-step carousel. */
+.hero { background: #071A33; }
+.hero-image { opacity: .08; filter: grayscale(1) saturate(.25) contrast(.9); }
+.hero-overlay { background: linear-gradient(90deg, rgba(7,26,51,.99) 0%, rgba(7,26,51,.97) 58%, rgba(7,26,51,.92) 100%); }
+.trade-track--six { width: 100% !important; display: block; transform: none !important; }
+.trade-track--six .trade-card { display: none; width: 100%; min-height: 0; }
+.trade-track--six[data-active-slide="0"] .trade-card:nth-child(1),
+.trade-track--six[data-active-slide="1"] .trade-card:nth-child(2),
+.trade-track--six[data-active-slide="2"] .trade-card:nth-child(3),
+.trade-track--six[data-active-slide="3"] .trade-card:nth-child(4),
+.trade-track--six[data-active-slide="4"] .trade-card:nth-child(5),
+.trade-track--six[data-active-slide="5"] .trade-card:nth-child(6) { display: flex; }
+.examples-visual img { object-position: center 42%; }
+
+/* Override legacy display selectors so every major heading uses the sober upright family. */
+.hero h1, .section-heading h2, .section-intro h2, .examples-content h2, .feature-inner h2, .final-cta h2, .step-card h3, .audience-card h3, .trade-card h3, .capacity-copy h2 { font-family:'IBM Plex Sans',sans-serif !important; font-style:normal !important; font-weight:700 !important; }
+.hero h1 em, .section-heading h2 em, .section-intro h2 em, .examples-content h2 em, .feature-inner h2 em, .final-cta h2 em, .capacity-copy h2 em { font-family:'IBM Plex Sans',sans-serif !important; font-style:normal !important; font-weight:700 !important; }

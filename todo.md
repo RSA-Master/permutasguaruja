@@ -71,3 +71,11 @@
 - [x] Garantir fallback/localização estável para as seis imagens do carrossel.
 - [x] Substituir a tipografia itálica por uma fonte profissional não inclinada.
 - [x] Validar desktop, celular, imagens e interação antes do checkpoint.
+
+## Nova revisão — tipografia, fundo, carrossel e imagem
+
+- [x] Trocar a fonte arredondada por uma família mais sóbria e profissional.
+- [x] Simplificar o fundo do Hero, removendo detalhes excessivos.
+- [x] Corrigir a lógica de troca visual dos seis slides do carrossel.
+- [x] Substituir a imagem aleatória de “Possibilidades ilustrativas” por uma imagem coerente com permutas.
+- [x] Validar desktop, celular e interação antes do checkpoint.
