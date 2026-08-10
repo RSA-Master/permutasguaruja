@@ -15,3 +15,10 @@
 - [x] Refinar header fixo com redução, fundo sólido e backdrop blur ao rolar.
 - [x] Adicionar CTA fixo discreto no mobile: “Entrar na comunidade”.
 - [x] Validar desktop, tablet e celular antes de salvar o checkpoint final.
+
+## Revisão pontual atual
+
+- [x] Remover o CTA flutuante fixo “Entrar na comunidade” do mobile.
+- [x] Converter o exemplo prático em carrossel de cards com controles acessíveis.
+- [x] Remover a borda quadrada dourada ao redor do logotipo e aplicar cantos arredondados.
+- [x] Validar desktop e mobile e salvar o novo checkpoint.

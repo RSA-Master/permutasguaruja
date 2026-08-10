@@ -191,3 +191,18 @@ button { font:inherit; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } .reveal,.reveal-stagger,.reveal-stagger > * { opacity:1!important; transform:none!important; } }
 @media (max-width:800px) { .hero-flow { right:20px; top:auto; bottom:120px; transform:scale(.85); transform-origin:right center; } .trade-flow { display:flex; flex-direction:column; gap:0; } .trade-card { min-height:0; } .trade-connector { min-height:57px; flex-direction:row; } .trade-connector svg { transform:rotate(90deg); } .capacity-layout { grid-template-columns:1fr; gap:42px; } .capacity-flow { grid-template-columns:1fr; } .capacity-item { min-height:0; } .mobile-community-cta { position:fixed; display:flex; align-items:center; justify-content:center; gap:9px; z-index:20; left:16px; right:16px; bottom:14px; min-height:46px; background:var(--gold); color:var(--navy); box-shadow:0 10px 24px rgba(7,26,51,.23); text-transform:uppercase; letter-spacing:.1em; font-size:10px; font-weight:800; } }
 @media (max-width:480px) { .hero-flow { right:7px; bottom:112px; transform:scale(.68); } }
+
+/* Final polish: rounded logo treatment and accessible practical-example carousel. */
+.brand-mark { border:0; border-radius:14px; background:transparent; overflow:hidden; }
+.brand-mark img { border-radius:12px; }
+.trade-carousel { overflow:hidden; position:relative; }
+.trade-track { display:flex; width:300%; transition:transform .42s cubic-bezier(.23,1,.32,1); }
+.trade-track .trade-card { flex:0 0 33.333333%; min-height:238px; }
+.trade-carousel-controls { display:flex; align-items:center; justify-content:center; gap:22px; margin-top:22px; }
+.trade-carousel-controls > button { display:grid; place-items:center; width:36px; height:36px; border:1px solid var(--line); background:#fff; color:var(--navy); transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease; }
+.trade-carousel-controls > button:hover:not(:disabled) { background:var(--navy); border-color:var(--navy); color:#fff; transform:translateY(-2px); }
+.trade-carousel-controls > button:disabled { opacity:.35; cursor:not-allowed; }
+.trade-dots { display:flex; align-items:center; gap:8px; }
+.trade-dots button { width:7px; height:7px; padding:0; border:0; border-radius:50%; background:#C4D1D9; transition:transform .18s ease,background .18s ease; }
+.trade-dots button[aria-current="true"] { background:var(--gold); transform:scale(1.45); }
+@media (max-width:800px) { .trade-track .trade-card { min-height:225px; } }
