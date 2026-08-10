@@ -206,3 +206,11 @@ button { font:inherit; }
 .trade-dots button { width:7px; height:7px; padding:0; border:0; border-radius:50%; background:#C4D1D9; transition:transform .18s ease,background .18s ease; }
 .trade-dots button[aria-current="true"] { background:var(--gold); transform:scale(1.45); }
 @media (max-width:800px) { .trade-track .trade-card { min-height:225px; } }
+
+/* Five-step illustrative carousel: compact storytelling with one focused card per step. */
+.trade-track--five { width:500%; }
+.trade-track--five .trade-card { flex-basis:20%; }
+.trade-card--need { background:#F5F7F8; }
+.trade-card--search { background:#EDF4F7; }
+.trade-card--win { background:#F7F1E2; }
+.trade-card--need h3,.trade-card--search h3,.trade-card--win h3 { color:var(--navy); }

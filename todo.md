@@ -22,3 +22,10 @@
 - [x] Converter o exemplo prático em carrossel de cards com controles acessíveis.
 - [x] Remover a borda quadrada dourada ao redor do logotipo e aplicar cantos arredondados.
 - [x] Validar desktop e mobile e salvar o novo checkpoint.
+
+## Carrossel ilustrativo — jornada da loja de roupas
+
+- [x] Reescrever os cards do exemplo prático com textos curtos e sequenciais.
+- [x] Mostrar visualmente loja, serviço necessário, busca por profissional, permuta e benefícios para os dois lados.
+- [x] Manter a observação de que cada negociação depende do interesse e das condições acordadas.
+- [x] Validar a leitura do carrossel em desktop e celular e salvar o checkpoint.
