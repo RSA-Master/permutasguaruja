@@ -29,3 +29,15 @@
 - [x] Mostrar visualmente loja, serviço necessário, busca por profissional, permuta e benefícios para os dois lados.
 - [x] Manter a observação de que cada negociação depende do interesse e das condições acordadas.
 - [x] Validar a leitura do carrossel em desktop e celular e salvar o checkpoint.
+
+## Imagens ilustrativas para aprovação
+
+- [ ] Definir direção visual fiel à narrativa da loja de roupas e da permuta.
+- [ ] Gerar imagens ilustrativas para os cards, sem incorporá-las ao site ainda.
+- [ ] Aguardar aprovação do usuário antes de substituir o conteúdo atual do carrossel.
+
+## Sincronização com GitHub
+
+- [ ] Configurar o repositório remoto `RSA-Master/permutasguaruja`.
+- [ ] Enviar o código atual do projeto para o branch principal.
+- [ ] Confirmar que os arquivos estão disponíveis no GitHub.
