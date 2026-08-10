@@ -55,3 +55,11 @@
 - [x] Configurar a Vercel para publicar `dist/public` como frontend estático.
 - [x] Validar o build e o preview da aplicação.
 - [x] Enviar a correção para o GitHub e orientar o redeploy.
+
+## Correções de produção — assets e carrossel
+
+- [x] Diagnosticar por que o logotipo não aparece na Vercel e substituir referências incompatíveis.
+- [x] Corrigir a escala das imagens do carrossel no desktop.
+- [x] Implementar navegação lateral por toque/gesto, além dos controles existentes.
+- [x] Melhorar o contraste do fundo e a leitura da interface na versão web.
+- [x] Validar os ajustes em desktop e celular e salvar novo checkpoint.

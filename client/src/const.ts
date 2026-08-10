@@ -4,8 +4,8 @@ export const SITE_LINKS = {
   whatsappGroup: "https://chat.whatsapp.com/HOmR5wJWzW476dtD4hV2Ck",
   facebookPage: "https://facebook.com/permutasguaruja",
   instagram: "https://instagram.com/permutasguaruja",
-  logo: "/manus-storage/permutas-guaruja-logo_2184845c.png",
-  fallbackMark: "/manus-storage/permutas-guaruja-mark_382647fd.png",
+  logo: "/assets/permutas/permutas-guaruja-logo.png",
+  fallbackMark: "/assets/permutas/permutas-guaruja-logo.png",
   rsaWhatsapp: "https://wa.me/5512988052097?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Permutas%20Guaruj%C3%A1%20e%20gostaria%20de%20saber%20mais.",
 } as const;
 

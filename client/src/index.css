@@ -224,3 +224,29 @@ button { font:inherit; }
 .trade-card-caption .trade-index { display:block; margin-bottom:.65rem; }
 .trade-card-caption h3 { margin:.22rem 0 .45rem; }
 .trade-card-caption strong { display:block; line-height:1.55; }
+
+/* Production polish: Vercel-safe assets, contained visual cards, tactile carousel, and stronger contrast. */
+.hero-overlay { background: linear-gradient(90deg, rgba(4, 17, 36, .96) 0%, rgba(4, 17, 36, .82) 46%, rgba(4, 17, 36, .34) 100%); }
+.hero-image { opacity: .76; }
+.section-light { background: #fbfaf6; }
+.section-mist { background-color: #edf2f2; }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border: 0; border-radius: 12px; overflow: hidden; background: transparent; }
+.brand-mark img { display: block; width: 100%; height: 100%; border-radius: 12px; object-fit: cover; }
+.trade-carousel { cursor: grab; touch-action: pan-y; user-select: none; }
+.trade-carousel:active { cursor: grabbing; }
+.trade-track--six { width: 600%; }
+.trade-track--six .trade-card { flex-basis: 16.6667%; }
+.trade-card--visual { display: flex; flex-direction: column; align-items: center; background: #fffdf8; }
+.trade-card-image { width: min(100%, 560px); height: auto; max-height: 560px; aspect-ratio: auto; object-fit: contain; object-position: center top; background: #eee9df; }
+.trade-card-caption { width: min(100%, 560px); align-self: center; padding: 1.15rem 1.35rem 1.35rem; }
+@media (min-width: 801px) {
+  .trade-carousel { max-width: 920px; margin-inline: auto; }
+  .trade-card-caption { min-height: 150px; }
+}
+@media (max-width: 800px) {
+  .trade-card-image { width: 100%; max-height: 460px; }
+  .trade-card-caption { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trade-carousel, .trade-track { scroll-behavior: auto; transition: none; }
+}
