@@ -48,3 +48,10 @@
 - [x] Associar as seis imagens às etapas narrativas do carrossel.
 - [x] Atualizar o carrossel para seis slides sem alterar os textos principais.
 - [x] Validar desktop, celular e salvar checkpoint.
+
+## Correção de deploy na Vercel
+
+- [x] Diagnosticar por que a Vercel está exibindo o `server/index.ts`.
+- [x] Configurar a Vercel para publicar `dist/public` como frontend estático.
+- [x] Validar o build e o preview da aplicação.
+- [x] Enviar a correção para o GitHub e orientar o redeploy.
