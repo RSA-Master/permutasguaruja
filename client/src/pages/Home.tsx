@@ -20,7 +20,7 @@ import {
   Wrench,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SITE_LINKS } from "@/const";
 
 const heroImage = "/manus-storage/permutas-guaruja-hero_cca0f62e.png";
@@ -66,7 +66,7 @@ function Brand({ light = false }: { light?: boolean }) {
   return (
     <a href="#inicio" className="brand" aria-label="Permutas Guarujá — início">
       <span className={"brand-mark" + (light ? " brand-mark--light" : "")}>
-        <img src={SITE_LINKS.logo !== "LOGO_URL" ? SITE_LINKS.logo : SITE_LINKS.fallbackMark} alt="" />
+        <img src={SITE_LINKS.logo} alt="" />
       </span>
       <span className={light ? "brand-name brand-name--light" : "brand-name"}>
         <strong>Permutas</strong>
@@ -90,13 +90,41 @@ function CommunityLinks({ compact = false }: { compact?: boolean }) {
   );
 }
 
+function useScrollReveal() {
+  useEffect(() => {
+    const items = document.querySelectorAll<HTMLElement>(".reveal, .reveal-stagger");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      items.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    items.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+}
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useScrollReveal();
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 28);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <main>
-      <header className="site-header" id="inicio">
+      <header className={scrolled ? "site-header site-header--scrolled" : "site-header"} id="inicio">
         <div className="container nav-wrap">
           <Brand />
           <nav className={menuOpen ? "main-nav main-nav--open" : "main-nav"} aria-label="Navegação principal">
@@ -114,7 +142,7 @@ export default function Home() {
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-image" style={{ backgroundImage: `url(${heroImage})` }} aria-hidden="true" />
-        <div className="hero-overlay" aria-hidden="true" />
+        <div className="hero-overlay" aria-hidden="true" /><div className="hero-flow" aria-hidden="true"><span className="flow-node flow-node--one">O que você tem</span><i /><span className="flow-node flow-node--two">Permuta</span><i /><span className="flow-node flow-node--three">O que você precisa</span></div>
         <div className="container hero-inner">
           <div className="hero-copy">
             <p className="eyebrow eyebrow--gold"><span /> Comunidade de negócios • Guarujá/SP</p>
@@ -172,6 +200,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="practical-example section-light" id="exemplo-pratico"><div className="container"><div className="section-heading"><div><p className="eyebrow"><span /> Exemplo prático</p><h2>Imagine esta <em>situação.</em></h2></div><p>Uma forma simples de visualizar como uma permuta pode aproximar necessidades diferentes.</p></div><div className="trade-flow reveal-stagger"><article className="trade-card trade-card--store"><span className="trade-index">01</span><Store size={23} /><p className="card-kicker">Loja de roupas</p><h3>Oferece</h3><strong>Roupas e produtos da loja</strong></article><div className="trade-connector"><ArrowRight size={20} /><span>negociação</span></div><article className="trade-card trade-card--exchange"><span className="trade-index">02</span><Handshake size={23} /><p className="card-kicker">Permuta</p><h3>Conecta</h3><strong>Valor combinado entre as partes</strong></article><div className="trade-connector"><ArrowRight size={20} /><span>necessidade</span></div><article className="trade-card trade-card--professional"><span className="trade-index">03</span><Wrench size={23} /><p className="card-kicker">Profissional</p><h3>Recebe</h3><strong>Rebaixamento de teto + reforma da fachada</strong></article></div><p className="trade-note">A loja fornece produtos no valor negociado e recebe os serviços necessários. <strong>Todos saem ganhando.</strong> Os exemplos são ilustrativos; cada permuta é negociada diretamente entre os participantes.</p></div></section>
+
+      <section className="capacity section-navy"><div className="container capacity-layout"><div className="capacity-copy reveal"><p className="eyebrow eyebrow--gold"><span /> Capacidade ociosa</p><h2>Seu tempo <em>também tem valor.</em></h2><p>Um profissional com horários disponíveis pode transformar esse tempo ocioso em produtos e serviços que precisa.</p></div><div className="capacity-flow reveal-stagger"><div className="capacity-item"><span>Fotógrafo</span><small>Tem uma data disponível.</small><b>↓</b><strong>Pode oferecer um ensaio.</strong><b>↓</b><em>Pode receber outro serviço em permuta.</em></div><div className="capacity-item"><span>Profissional de estética</span><small>Tem horários disponíveis.</small><b>↓</b><strong>Oferece seu atendimento.</strong><b>↓</b><em>Pode receber produtos ou serviços.</em></div></div></div></section>
+
       <section className="examples section-mist" id="exemplos">
         <div className="container examples-layout">
           <div className="examples-visual"><img src={detailImage} alt="Módulos conectados representando oferta e necessidade" loading="lazy" /><span className="visual-caption">Possibilidades ilustrativas</span></div>
@@ -185,7 +217,7 @@ export default function Home() {
 
       <section className="responsibility"><div className="container responsibility-inner"><div className="responsibility-mark"><Check size={17} /></div><div><h2>Sobre as negociações</h2><p>O Permutas Guarujá é uma comunidade criada para aproximar empresas e profissionais interessados em realizar permutas.</p><p>As negociações são realizadas diretamente entre as partes. Valores, condições, contratos, pagamentos, entrega de produtos e execução dos serviços são de responsabilidade exclusiva dos envolvidos. O Permutas Guarujá não participa das negociações e não garante os produtos ou serviços oferecidos pelos participantes.</p></div></div></section>
 
-      <footer className="site-footer"><div className="container footer-grid"><div><Brand light /><p>Empresas e profissionais conectados para fazer negócios através da permuta.</p></div><div><p className="footer-title">Comunidade</p><CommunityLinks /></div><div><p className="footer-title">Uma iniciativa local</p><p>Foco inicial exclusivo em Guarujá/SP.</p><p className="footer-credit">Desenvolvido por <a href={SITE_LINKS.rsaWhatsapp} target="_blank" rel="noreferrer">RSA Digital Consultoria</a></p></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Permutas Guarujá</span><span>Produtos e serviços em movimento.</span></div></footer>
+      <a className="mobile-community-cta" href={SITE_LINKS.facebookGroup} target="_blank" rel="noreferrer">Entrar na comunidade <ArrowUpRight size={15} /></a><footer className="site-footer"><div className="container footer-grid"><div><Brand light /><p>Empresas e profissionais conectados para fazer negócios através da permuta.</p></div><div><p className="footer-title">Comunidade</p><CommunityLinks /></div><div><p className="footer-title">Uma iniciativa local</p><p>Foco inicial exclusivo em Guarujá/SP.</p><p className="footer-credit">Desenvolvido por <a href={SITE_LINKS.rsaWhatsapp} target="_blank" rel="noreferrer">RSA Digital Consultoria</a></p></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Permutas Guarujá</span><span>Produtos e serviços em movimento.</span></div></footer>
     </main>
   );
 }
