@@ -1,17 +1,16 @@
-export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
+// Editorial Atlântico: centralized editable destinations and visual assets for Permutas Guarujá.
+export const SITE_LINKS = {
+  facebookGroup: "FACEBOOK_GROUP_URL",
+  whatsappGroup: "WHATSAPP_GROUP_URL",
+  facebookPage: "FACEBOOK_PAGE_URL",
+  instagram: "INSTAGRAM_URL",
+  logo: "LOGO_URL",
+  fallbackMark: "/manus-storage/permutas-guaruja-mark_382647fd.png",
+  rsaWhatsapp: "https://wa.me/5512988052097",
+} as const;
 
-// Generate login URL at runtime so redirect URI reflects the current origin.
-export const getLoginUrl = () => {
-  const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
-  const appId = import.meta.env.VITE_APP_ID;
-  const redirectUri = `${window.location.origin}/api/oauth/callback`;
-  const state = btoa(redirectUri);
-
-  const url = new URL(`${oauthPortalUrl}/app-auth`);
-  url.searchParams.set("appId", appId);
-  url.searchParams.set("redirectUri", redirectUri);
-  url.searchParams.set("state", state);
-  url.searchParams.set("type", "signIn");
-
-  return url.toString();
-};
+export const SITE_META = {
+  title: "Permutas Guarujá | Produtos e Serviços",
+  description:
+    "Conectamos empresas e profissionais do Guarujá para encontrar oportunidades de permuta de produtos e serviços. Participe gratuitamente.",
+} as const;
