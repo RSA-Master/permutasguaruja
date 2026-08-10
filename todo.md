@@ -38,6 +38,13 @@
 
 ## Sincronização com GitHub
 
-- [ ] Configurar o repositório remoto `RSA-Master/permutasguaruja`.
-- [ ] Enviar o código atual do projeto para o branch principal.
-- [ ] Confirmar que os arquivos estão disponíveis no GitHub.
+- [x] Configurar o repositório remoto `RSA-Master/permutasguaruja`.
+- [x] Enviar o código atual do projeto para o branch principal.
+- [x] Confirmar que os arquivos estão disponíveis no GitHub.
+
+## Integração das imagens do GitHub no carrossel
+
+- [x] Verificar acesso e formato dos seis arquivos Raw.
+- [x] Associar as seis imagens às etapas narrativas do carrossel.
+- [x] Atualizar o carrossel para seis slides sem alterar os textos principais.
+- [x] Validar desktop, celular e salvar checkpoint.

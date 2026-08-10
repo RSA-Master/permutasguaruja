@@ -214,3 +214,13 @@ button { font:inherit; }
 .trade-card--search { background:#EDF4F7; }
 .trade-card--win { background:#F7F1E2; }
 .trade-card--need h3,.trade-card--search h3,.trade-card--win h3 { color:var(--navy); }
+
+/* GitHub-hosted illustrated carousel cards: preserve the vertical artwork and keep captions readable. */
+.trade-track--six { width:600%; }
+.trade-track--six .trade-card { flex-basis:16.6667%; padding:0; overflow:hidden; }
+.trade-card--visual { background:#fffaf0; }
+.trade-card-image { display:block; width:100%; aspect-ratio:1664 / 2080; object-fit:cover; object-position:center top; }
+.trade-card-caption { padding:1.05rem 1.2rem 1.25rem; }
+.trade-card-caption .trade-index { display:block; margin-bottom:.65rem; }
+.trade-card-caption h3 { margin:.22rem 0 .45rem; }
+.trade-card-caption strong { display:block; line-height:1.55; }
