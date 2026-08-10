@@ -63,3 +63,11 @@
 - [x] Implementar navegação lateral por toque/gesto, além dos controles existentes.
 - [x] Melhorar o contraste do fundo e a leitura da interface na versão web.
 - [x] Validar os ajustes em desktop e celular e salvar novo checkpoint.
+
+## Correção prioritária — carrossel e tipografia
+
+- [x] Diagnosticar por que as imagens do carrossel deixaram de aparecer.
+- [x] Reimplementar a navegação do carrossel com uma lógica simples e confiável.
+- [x] Garantir fallback/localização estável para as seis imagens do carrossel.
+- [x] Substituir a tipografia itálica por uma fonte profissional não inclinada.
+- [x] Validar desktop, celular, imagens e interação antes do checkpoint.

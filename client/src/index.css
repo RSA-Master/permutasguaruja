@@ -250,3 +250,11 @@ button { font:inherit; }
 @media (prefers-reduced-motion: reduce) {
   .trade-carousel, .trade-track { scroll-behavior: auto; transition: none; }
 }
+
+/* Typography refinement: professional, upright display hierarchy. */
+.hero h1, .section-heading h2, .capacity-copy h2, .final-cta h2, .trade-card h3 { font-family: 'Manrope', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.045em; }
+.hero h1 em, .section-heading h2 em, .capacity-copy h2 em, .final-cta h2 em { font-family: 'Manrope', sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.05em; }
+
+/* Final type lock: keep all display copy upright and professional. */
+h1, h2, h3, h4, h5, h6, h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-family: 'Manrope', sans-serif; font-style: normal; }
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-weight: 800; }

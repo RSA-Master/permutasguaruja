@@ -24,3 +24,7 @@ URLs verificadas:
 
 - https://raw.githubusercontent.com/RSA-Master/permutasguaruja/main/public/assets/permutas/carrossel-permutas-card-05.png
 - https://raw.githubusercontent.com/RSA-Master/permutasguaruja/main/public/assets/permutas/carrossel-permutas-card-06.png
+
+## Diagnóstico de produção — 2026-08-10
+
+As URLs informadas anteriormente no branch `main` retornam 404 atualmente e os seis arquivos não estão mais na árvore remota. Os PNGs foram localizados no histórico Git no commit `f7a12b5` (`Add permutas carousel illustration assets`), nos caminhos `public/assets/permutas/carrossel-permutas-card-01.png` até `-06.png`. A falha do carrossel decorre da dependência dessas URLs removidas.
