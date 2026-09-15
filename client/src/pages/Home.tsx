@@ -176,7 +176,7 @@ export default function Home() {
         <div className="container hero-inner">
           <div className="hero-copy">
             <p className="eyebrow eyebrow--gold"><span /> Comunidade de negócios • Guarujá/SP</p>
-            <h1 id="hero-title">Troque o que você tem <em>pelo que você precisa.</em></h1>
+            <h1 id="hero-title">Permutas de serviço em Guarujá e Região</h1>
             <p className="hero-lead">Produtos, serviços, tempo e capacidade ociosa também podem gerar negócios.</p>
             <p className="hero-text">O Permutas Guarujá conecta empresas e profissionais que querem encontrar oportunidades de permuta de produtos e serviços.</p>
             <div className="hero-actions">

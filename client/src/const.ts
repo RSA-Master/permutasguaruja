@@ -10,7 +10,7 @@ export const SITE_LINKS = {
 } as const;
 
 export const SITE_META = {
-  title: "Permutas Guarujá | Produtos e Serviços",
+  title: "Permutas de serviço em Guarujá e Região | Permutas Guarujá",
   description:
-    "Conectamos empresas e profissionais do Guarujá para encontrar oportunidades de permuta de produtos e serviços. Participe gratuitamente.",
+    "Encontre oportunidades de permutas de serviços, produtos e capacidades entre empresas e profissionais do Guarujá e região. Participe gratuitamente.",
 } as const;
