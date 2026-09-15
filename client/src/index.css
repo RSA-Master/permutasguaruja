@@ -276,3 +276,24 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-weight: 800; }
 /* Override legacy display selectors so every major heading uses the sober upright family. */
 .hero h1, .section-heading h2, .section-intro h2, .examples-content h2, .feature-inner h2, .final-cta h2, .step-card h3, .audience-card h3, .trade-card h3, .capacity-copy h2 { font-family:'IBM Plex Sans',sans-serif !important; font-style:normal !important; font-weight:700 !important; }
 .hero h1 em, .section-heading h2 em, .section-intro h2 em, .examples-content h2 em, .feature-inner h2 em, .final-cta h2 em, .capacity-copy h2 em { font-family:'IBM Plex Sans',sans-serif !important; font-style:normal !important; font-weight:700 !important; }
+
+/* Hero viewport fit: keep the first screen readable on desktop and mobile. */
+@media (min-width: 801px) {
+  .hero { min-height: 100svh; }
+  .hero-inner { padding-top: 68px; }
+  .hero-copy { padding: 46px 0 46px; }
+  .hero h1 { font-size: clamp(42px, 5.2vw, 72px); }
+  .hero-lead { margin-top: 22px; font-size: 17px; }
+  .hero-actions { margin-top: 24px; }
+}
+
+@media (max-width: 800px) {
+  .hero { min-height: 100svh; }
+  .hero-inner { padding-top: 60px; }
+  .hero-copy { padding: 48px 0 38px; }
+  .hero h1 { font-size: clamp(38px, 10.5vw, 58px); line-height: 1.02; }
+  .hero-lead { margin-top: 20px; font-size: 15px; line-height: 1.42; }
+  .hero-text { font-size: 12px; line-height: 1.58; margin-top: 12px; }
+  .hero-actions { margin-top: 22px; }
+  .community-links--compact { margin-top: 16px; }
+}
