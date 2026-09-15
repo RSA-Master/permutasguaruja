@@ -1,0 +1,10 @@
+export const faqs = [
+  ["Sou prestador de serviços. Posso fazer parte do Permutas Guarujá?", "Sim. Prestadores de serviços de qualquer ramo podem fazer parte, como pedreiros, mecânicos, pintores, dentistas, fotógrafos, profissionais de estética e muitos outros. Você pode oferecer seus serviços em troca de produtos ou outros serviços, sem que a proposta dependa de uma transação financeira."],
+  ["Quem pode participar do projeto?", "Empresas, profissionais autônomos, prestadores de serviços e empreendedores do Guarujá e região podem participar. O importante é ter algo de valor para oferecer e interesse em encontrar novas oportunidades."],
+  ["O que posso oferecer em uma permuta?", "Você pode oferecer serviços, produtos, estoque parado, horários disponíveis, espaço, divulgação, conhecimento técnico ou capacidade de trabalho. Cada participante decide o que faz sentido para sua realidade."],
+  ["Como funciona uma permuta?", "Você entra na comunidade, apresenta o que pode oferecer ou procura algo de que precisa, conversa diretamente com a outra parte e combina as condições da troca. Cada negociação é feita pelos próprios participantes."],
+  ["É obrigatório envolver dinheiro na negociação?", "Não. A proposta do projeto é viabilizar trocas de produtos e serviços sem depender de pagamento em dinheiro. As partes podem avaliar livremente a melhor forma de realizar cada acordo."],
+  ["Participar do Permutas Guarujá é gratuito?", "Sim. A entrada na comunidade é gratuita. Para participar, use os links do grupo do Facebook ou do grupo do WhatsApp disponíveis no site."],
+  ["O projeto participa ou garante as negociações?", "Não. O Permutas Guarujá aproxima empresas e profissionais, mas não intermedeia nem garante as negociações. Valores, prazos, contratos, entrega, execução e condições devem ser avaliados e combinados diretamente entre as partes."],
+  ["Como posso começar a participar?", "Entre no grupo do Facebook ou no grupo do WhatsApp pelos botões do site, apresente o que você oferece e diga o que está procurando. Faça parte desse projeto desde o início."],
+] as const;

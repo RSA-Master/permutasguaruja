@@ -1,5 +1,6 @@
 ---
 import App from "../../client/src/AstroApp";
+import { faqs } from "../../client/src/faq";
 import "../../client/src/index.css";
 
 const siteUrl = "https://permutasguaruja.vercel.app/";
@@ -10,6 +11,50 @@ const sameAs = [
   "https://facebook.com/permutasguaruja",
   "https://instagram.com/permutasguaruja",
 ];
+const logoUrl = `${siteUrl}assets/permutas/permutas-guaruja-logo.png`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}#organization`,
+      name: "Permutas Guarujá",
+      url: siteUrl,
+      logo: logoUrl,
+      description: "Projeto em fase inicial que pretende conectar empresas e profissionais para encontrar oportunidades de permuta de serviços e produtos no Guarujá e região.",
+      areaServed: { "@type": "Place", name: "Guarujá e região, São Paulo, Brasil" },
+      sameAs,
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}#localbusiness`,
+      name: "Permutas Guarujá",
+      url: siteUrl,
+      logo: logoUrl,
+      description: "Comunidade local em fase inicial para aproximar empresas e profissionais interessados em permutas no Guarujá e região.",
+      areaServed: { "@type": "Place", name: "Guarujá e região, São Paulo, Brasil" },
+      parentOrganization: { "@id": `${siteUrl}#organization` },
+      sameAs,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      name: "Permutas Guarujá",
+      url: siteUrl,
+      inLanguage: "pt-BR",
+      publisher: { "@id": `${siteUrl}#organization` },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}#faq`,
+      mainEntity: faqs.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+  ],
+};
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -17,6 +62,8 @@ const sameAs = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#071A33" />
+    <meta name="author" content="Permutas Guarujá" />
+    <meta name="robots" content="index, follow" />
     <meta name="description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
@@ -26,21 +73,16 @@ const sameAs = [
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Permutas de serviços e produtos no Guarujá e região" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content="Permutas de serviços e produtos no Guarujá e região" />
     <link rel="canonical" href={siteUrl} />
     <link rel="icon" type="image/png" href="/assets/permutas/permutas-guaruja-logo.png" />
     <title>{title}</title>
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Permutas Guarujá",
-      url: siteUrl,
-      description: "Projeto em fase inicial que pretende conectar empresas e profissionais para encontrar oportunidades de permuta de serviços e produtos no Guarujá e região.",
-      sameAs,
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <App client:load />

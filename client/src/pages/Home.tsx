@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { type PointerEvent as ReactPointerEvent, useEffect, useRef, useState } from "react";
 import { SITE_LINKS } from "@/const";
+import { faqs } from "@/faq";
 
 const heroImage = "/assets/permutas/hero.webp";
 const patternImage = "/assets/permutas/pattern.webp";
@@ -162,6 +163,7 @@ export default function Home() {
             <a href="#como-funciona" onClick={closeMenu}>Como funciona</a>
             <a href="#para-quem" onClick={closeMenu}>Para quem é</a>
             <a href="#exemplos" onClick={closeMenu}>Exemplos</a>
+            <a href="#faq" onClick={closeMenu}>Dúvidas</a>
             <a className="nav-cta" href={SITE_LINKS.facebookGroup} target={SITE_LINKS.facebookGroup.includes("URL") ? undefined : "_blank"} rel="noreferrer" onClick={closeMenu}>Quero participar <ArrowUpRight size={15} /></a>
           </nav>
           <button className="menu-toggle" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
@@ -238,6 +240,23 @@ export default function Home() {
         <div className="container examples-layout">
           <div className="examples-visual"><img src={detailImage} alt="Módulos conectados representando oferta e necessidade" loading="lazy" /><span className="visual-caption">Possibilidades ilustrativas</span></div>
           <div className="examples-content"><p className="eyebrow"><span /> Ideias para começar</p><h2>Como uma permuta <em>pode acontecer?</em></h2><div className="examples-list">{examples.map(([from, to, text]) => <div className="example-row" key={from}><div className="exchange-label"><strong>{from}</strong><span>↔</span><strong>{to}</strong></div><p>{text}</p></div>)}</div><p className="examples-note">As possibilidades dependem do que cada participante tem para oferecer e do que está procurando.</p></div>
+        </div>
+      </section>
+
+      <section className="faq-section section-light" id="faq">
+        <div className="container faq-layout">
+          <div className="section-heading">
+            <div><p className="eyebrow"><span /> Perguntas frequentes</p><h2>Antes de <em>participar.</em></h2></div>
+            <p>As principais dúvidas de quem está conhecendo o Projeto Permutas Guarujá.</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map(([question, answer]) => (
+              <details className="faq-item" key={question}>
+                <summary>{question}<span aria-hidden="true">+</span></summary>
+                <p>{answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
