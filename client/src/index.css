@@ -289,6 +289,7 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-weight: 800; }
 
 @media (max-width: 800px) {
   .hero { min-height: 100svh; }
+  .hero-flow { display: none; }
   .hero-inner { padding-top: 60px; }
   .hero-copy { padding: 48px 0 38px; }
   .hero h1 { font-size: clamp(38px, 10.5vw, 58px); line-height: 1.02; }
