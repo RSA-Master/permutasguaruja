@@ -178,7 +178,7 @@ export default function Home() {
             <p className="eyebrow eyebrow--gold"><span /> Comunidade de negócios • Guarujá/SP</p>
             <h1 id="hero-title">Permutas de serviço em Guarujá e Região</h1>
             <p className="hero-lead">Produtos, serviços, tempo e capacidade ociosa também podem gerar negócios.</p>
-            <p className="hero-text">O Permutas Guarujá conecta empresas e profissionais que querem encontrar oportunidades de permuta de produtos e serviços.</p>
+            <p className="hero-text">O Projeto Permutas Guarujá está em fase inicial e pretende conectar empresas e profissionais que querem encontrar oportunidades de permuta de produtos e serviços. Faça parte desse projeto!</p>
             <div className="hero-actions">
               <a className="button button--gold" href={SITE_LINKS.facebookGroup} target={SITE_LINKS.facebookGroup.includes("URL") ? undefined : "_blank"} rel="noreferrer">Entrar no grupo do Facebook <ArrowUpRight size={17} /></a>
               <a className="button button--outline-light" href={SITE_LINKS.whatsappGroup} target={SITE_LINKS.whatsappGroup.includes("URL") ? undefined : "_blank"} rel="noreferrer">Entrar no grupo do WhatsApp <ArrowUpRight size={17} /></a>
