@@ -6,6 +6,7 @@
 dist/
 build/
 *.dist
+.astro/
 
 # Environment variables
 .env

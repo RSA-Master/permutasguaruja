@@ -1,11 +1,5 @@
 {
-  "framework": "vite",
+  "framework": "astro",
   "buildCommand": "pnpm run build:vercel",
-  "outputDirectory": "dist/public",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "outputDirectory": "dist/public"
 }
