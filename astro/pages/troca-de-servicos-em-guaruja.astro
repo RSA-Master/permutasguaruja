@@ -1,0 +1,88 @@
+---
+import ServiceExchangePage from "../../client/src/pages/ServiceExchangePage";
+import { serviceExchangeFaqs } from "../../client/src/serviceExchangeFaqs";
+import "../../client/src/index.css";
+
+const siteUrl = "https://permutasguaruja.vercel.app";
+const pageUrl = `${siteUrl}/troca-de-servicos-em-guaruja`;
+const title = "Grupo de Troca de Serviços em Guarujá | Permutas Guarujá";
+const description = "Encontre empresas e profissionais para trocar serviços, produtos e outras formas de valor em Guarujá. Participe gratuitamente do Permutas Guarujá.";
+const socialImage = `${siteUrl}/assets/permutas/hero.webp`;
+const logoUrl = `${siteUrl}/assets/permutas/permutas-guaruja-logo.png`;
+const sameAs = ["https://facebook.com/permutasguaruja", "https://instagram.com/permutasguaruja"];
+const pageFaqs = serviceExchangeFaqs;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: title,
+      description,
+      inLanguage: "pt-BR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@type": "Thing", name: "Troca de serviços e produtos em Guarujá" },
+      primaryImageOfPage: { "@type": "ImageObject", contentUrl: socialImage },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Permutas Guarujá", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Troca de serviços em Guarujá", item: pageUrl },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: pageFaqs.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Permutas Guarujá",
+      url: `${siteUrl}/`,
+      logo: logoUrl,
+      sameAs,
+      areaServed: { "@type": "Place", name: "Guarujá e região, São Paulo, Brasil" },
+    },
+  ],
+};
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071A33" />
+    <meta name="author" content="Permutas Guarujá" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Permutas Guarujá" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Troca de serviços e produtos no Guarujá" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="icon" type="image/png" href="/assets/permutas/permutas-guaruja-logo.png" />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <ServiceExchangePage client:load />
+    <script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+export const serviceExchangeFaqs = [
+  ["O que é troca de serviços?", "Troca de serviços é quando duas empresas ou profissionais utilizam aquilo que sabem fazer para conseguir algo de que precisam. A negociação não precisa acontecer somente em dinheiro: serviços, produtos e outras formas de valor podem ser combinados diretamente entre as partes."],
+  ["Posso trocar um serviço por um produto?", "Sim. Produtos e serviços podem participar da negociação. Por exemplo, um profissional pode oferecer um atendimento e receber produtos de uma loja, desde que as duas partes concordem com a troca."],
+  ["Posso trocar produtos por serviços?", "Sim. Uma empresa pode usar produtos, estoque ou materiais que possui para encontrar um profissional interessado e negociar um serviço de que precisa."],
+  ["Preciso trocar exatamente o mesmo tipo de serviço?", "Não. O que importa é que as partes concordem com a troca, avaliem o que está sendo oferecido e definam diretamente as condições e os valores envolvidos."],
+  ["Existe grupo de troca de serviços em Guarujá?", "Sim. O Permutas Guarujá é uma comunidade gratuita criada para aproximar empresas e profissionais interessados em trocar produtos e serviços na cidade e região."],
+  ["Como encontrar alguém para trocar serviços em Guarujá?", "Participe da comunidade, publique o que você oferece e o que está procurando e acompanhe as oportunidades entre as publicações. O contato e a negociação acontecem diretamente entre os participantes."],
+  ["A troca precisa acontecer diretamente entre duas pessoas?", "Cada negociação possui suas próprias condições. Os participantes podem combinar diretamente a melhor forma de realizar a permuta, inclusive envolvendo produtos, serviços ou mais de uma necessidade, desde que todos concordem."],
+] as const;
