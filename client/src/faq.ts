@@ -1,4 +1,5 @@
 export const faqs = [
+  ["O que é permuta?", "Permuta é uma troca combinada diretamente entre pessoas, empresas ou profissionais. Em vez de depender apenas de dinheiro, uma parte oferece um produto ou serviço e recebe algo que tenha valor e utilidade para ela."],
   ["Sou prestador de serviços. Posso fazer parte do Permutas Guarujá?", "Sim. Prestadores de serviços de qualquer ramo podem fazer parte, como pedreiros, mecânicos, pintores, dentistas, fotógrafos, profissionais de estética e muitos outros. Você pode oferecer seus serviços em troca de produtos ou outros serviços, sem que a proposta dependa de uma transação financeira."],
   ["Quem pode participar do projeto?", "Empresas, profissionais autônomos, prestadores de serviços e empreendedores do Guarujá e região podem participar. O importante é ter algo de valor para oferecer e interesse em encontrar novas oportunidades."],
   ["O que posso oferecer em uma permuta?", "Você pode oferecer serviços, produtos, estoque parado, horários disponíveis, espaço, divulgação, conhecimento técnico ou capacidade de trabalho. Cada participante decide o que faz sentido para sua realidade."],

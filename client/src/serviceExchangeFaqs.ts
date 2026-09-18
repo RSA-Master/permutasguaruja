@@ -1,4 +1,5 @@
 export const serviceExchangeFaqs = [
+  ["O que é permuta?", "Permuta é uma troca combinada diretamente entre pessoas, empresas ou profissionais. Em vez de depender apenas de dinheiro, uma parte oferece um produto ou serviço e recebe algo que tenha valor e utilidade para ela."],
   ["O que é troca de serviços?", "Troca de serviços é quando duas empresas ou profissionais utilizam aquilo que sabem fazer para conseguir algo de que precisam. A negociação não precisa acontecer somente em dinheiro: serviços, produtos e outras formas de valor podem ser combinados diretamente entre as partes."],
   ["Posso trocar um serviço por um produto?", "Sim. Produtos e serviços podem participar da negociação. Por exemplo, um profissional pode oferecer um atendimento e receber produtos de uma loja, desde que as duas partes concordem com a troca."],
   ["Posso trocar produtos por serviços?", "Sim. Uma empresa pode usar produtos, estoque ou materiais que possui para encontrar um profissional interessado e negociar um serviço de que precisa."],
